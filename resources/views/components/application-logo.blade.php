@@ -1,1 +1,1 @@
-<img src="" alt="logo">
+<img src="{{ asset('images/CoinWise.png') }}" class="h-20 w-20" />
