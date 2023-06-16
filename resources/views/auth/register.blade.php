@@ -10,18 +10,8 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Nome') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="dateBirth" value="{{ __('Data de Nascimento') }}" />
-                <x-input id="dateBirth" class="block mt-1 w-full" type="date" name="dateBirth" required autofocus autocomplete="dateBirth" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="phone" value="{{ __('Telefone') }}" />
-                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" required autofocus autocomplete="phone" />
+                <x-label for="name" value="{{ __('Name') }}" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
@@ -30,13 +20,13 @@
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Senha') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autofocus autocomplete="new-password" />
+                <x-label for="password" value="{{ __('Password') }}" />
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autofocus autocomplete="new-password" />
+                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -58,11 +48,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Já possuo uma conta') }}
+                    {{ __('Already registered?') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Registrar') }}
+                    {{ __('Register') }}
                 </x-button>
             </div>
         </form>
