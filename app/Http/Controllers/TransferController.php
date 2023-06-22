@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transfer;
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class TransferController extends Controller
 {
 
     public function index()
