@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('schedule');
             $table->boolean('isExpense');
+            $table->boolean('isRecurrent');
             $table->timestamps();
         });
     }

@@ -26,6 +26,7 @@ class TransferController extends Controller
         $register->description = $request->description;
         $register->schedule = $request->schedule;
         $register->isExpense = isset($request->isExpense)?true:false;
+        $register->isRecurrent = isset($request->isRecurrent)?true:false;
 
         $register->save();
         return redirect('/')->with('msg', 'Transferência criada com sucesso!');
