@@ -1,3 +1,3 @@
 <a href="/">
-    <img src="{{ asset('img/CoinWise.png') }}" style="display: none;" />
+    <img src="{{ asset('images/CoinWise.png') }}" class="h-20 w-20" />
 </a>

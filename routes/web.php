@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TransferController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/transacoes/ganhos', function () {
+    return view('ganhos');
+})->name('ganhos');
+
+Route::get('/transacoes/gastos', function () {
+    return view('gastos');
+})->name('gastos');
