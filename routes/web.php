@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TransferController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register/create', [RegisterController::class, 'create'])->name('register.create');
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+Route::get('/transfer/create', [TransferController::class, 'create'])->name('transfer.create');
+Route::post('/transfer', [TransferController::class, 'store'])->name('transfer.store');
 
 Route::middleware([
     'auth:sanctum',

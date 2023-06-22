@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Register;
-
+use App\Models\Transfer;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -16,12 +15,12 @@ class RegisterController extends Controller
 
     public function create()
     {
-        return view("create-register");
+        return view("create-transfer");
     }
 
     public function store(Request $request)
     {
-        $register = new Register();
+        $register = new Transfer();
         $register->title = $request->title;
         $register->value = $request->value;
         $register->description = $request->description;
@@ -29,7 +28,7 @@ class RegisterController extends Controller
         $register->isExpense = isset($request->isExpense)?true:false;
 
         $register->save();
-        return redirect('/')->with('msg', 'Registro criado com sucesso!');
+        return redirect('/')->with('msg', 'Transferência criada com sucesso!');
     }
 
     public function show(string $id)
