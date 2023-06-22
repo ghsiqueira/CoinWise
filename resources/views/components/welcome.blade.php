@@ -70,7 +70,7 @@
             Permitir ao usuário visualizar e editar seus ganhos e despesas existentes. Fornecer opções para categorizar as transações financeiras e criar ganhos e despesas recorrentes.
         </p>
         <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Adicionar
+            <a href="transfer/create">Adicionar</a>
         </button>
         <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
             Editar

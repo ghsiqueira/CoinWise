@@ -19,6 +19,12 @@ return new class extends Migration
             $table->date('schedule');
             $table->boolean('isExpense');
             $table->boolean('isRecurrent');
+            $table->foreignId('category_id')->constrained(
+                table: 'categories', indexName: 'transfer_category_id'
+            );
+            $table->foreignId('user_id')->constrained(
+                table: 'users', indexName: 'transfer_user_id'
+            );
             $table->timestamps();
         });
     }
