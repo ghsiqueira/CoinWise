@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Extrato;
+use Illuminate\Support\Facades\Auth;
 
 class ExtractController extends Controller
 {
     public function index(Request $request, Extrato $extrato)
     {
-        $query = $extrato->newQuery();
+        $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login');
+        }
+
+        $query = $extrato->newQuery()->where('user_id', $user->id);
+
         $selectedMonth = $request->input('month');
 
         if ($request->has('specific_month') && $selectedMonth) {
@@ -27,6 +35,6 @@ class ExtractController extends Controller
 
         $transfers = $query->paginate(10)->appends($request->query());
 
-        return view('extract.index', compact('transfers', 'selectedMonth'));
+        return view('extrato', compact('transfers', 'selectedMonth'));
     }
 }

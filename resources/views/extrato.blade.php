@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Extrato</title>
 
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -19,17 +19,28 @@
             width: 400px;
             margin-right: 20px;
         }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
 <div class="card-container">
+    <h1 class="text-center mb-4">Extrato</h1>
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('extract.index') }}" method="GET" class="mb-4">
+            <form action="{{ route('extrato') }}" method="GET">
                 @csrf
-                <div class="form-row">
+                <div class="form-row align-items-center mb-3">
                     <div class="col-auto">
-                        <div class="form-check mt-4">
+                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="specific_month" id="specific_month" value="1">
                             <label class="form-check-label" for="specific_month">Selecionar mês</label>
                         </div>
@@ -63,6 +74,7 @@
                     </div>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary">Visualizar Extrato</button>
+                        <a href="{{ route('dashboard') }}" class="btn btn-link">Voltar</a>
                     </div>
                 </div>
             </form>

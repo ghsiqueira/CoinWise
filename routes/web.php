@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/transfer', [TransferController::class, 'index'])->name('transfer.index');
 Route::get('/transfer/create', [TransferController::class, 'create'])->name('transfer.create');
 Route::post('/transfer', [TransferController::class, 'store'])->name('transfer.store');
-Route::get('/extract', [ExtractController::class, 'index'])->name('extract.index');
+Route::get('/extrato', [ExtractController::class, 'index'])->name('extrato');
 
 Route::middleware([
     'auth:sanctum',

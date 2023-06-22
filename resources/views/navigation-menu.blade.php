@@ -17,46 +17,6 @@
                             {{ __('Dashboard') }}
                         </x-nav-link>
                     </div>
-                    <div class="flex items-center">
-                        <x-dropdown align="bottom" width="48">
-                            <x-slot name="trigger">
-                                <button class="flex text-sm border-2 border-transparent rounded-md focus:outline-none focus:border-gray-300 transition">
-                                    {{ __('Transações') }}
-                                    <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                            </x-slot>
-                            <x-slot name="content">
-                                <x-dropdown-link href="{{ route('gastos') }}">
-                                    Gastos
-                                </x-dropdown-link>
-                                <x-dropdown-link href="{{ route('ganhos') }}">
-                                    Ganhos
-                                </x-dropdown-link>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
-                    <div class="flex items-center">
-                        <x-dropdown align="bottom" width="48">
-                            <x-slot name="trigger">
-                                <button class="flex text-sm border-2 border-transparent rounded-md focus:outline-none focus:border-gray-300 transition">
-                                    {{ __('Histórico') }}
-                                    <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                            </x-slot>
-                            <x-slot name="content">
-                                <x-dropdown-link href="#">
-                                    Opção 1
-                                </x-dropdown-link>
-                                <x-dropdown-link href="#">
-                                    Opção 2
-                                </x-dropdown-link>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
                 </div>
             </div>
 
@@ -105,7 +65,7 @@
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
+                                    @click.prevent="$root.submit();">
                                     {{ __('Sair') }}
                                 </x-dropdown-link>
                             </form>
@@ -166,7 +126,7 @@
                     @csrf
 
                     <x-responsive-nav-link href="{{ route('logout') }}"
-                                   @click.prevent="$root.submit();">
+                        @click.prevent="$root.submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>

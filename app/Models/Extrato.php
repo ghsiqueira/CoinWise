@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Extrato extends Model
 {
@@ -14,4 +15,9 @@ class Extrato extends Model
         'value',
         'isRecurrent',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
