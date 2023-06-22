@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< Updated upstream
+=======
+Route::get('/transfer', [TransferController::class, 'index'])->name('transfer.index');
+Route::get('/transfer/create', [TransferController::class, 'create'])->name('transfer.create');
+Route::post('/transfer', [TransferController::class, 'store'])->name('transfer.store');
+Route::get('/chart', [ChartController::class, 'showChart']);
+
+>>>>>>> Stashed changes
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
