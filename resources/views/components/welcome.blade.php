@@ -17,81 +17,27 @@
     <div>
         <div class="flex items-center">
             <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Visão Geral das Finanças
+                Finanças
             </h2>
         </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Exibir uma visão geral das finanças do usuário, incluindo o saldo atual.
-        </p>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Visualizar
-        </button>
+        <p>O usuário poderá adicionar ganhos e gastos!</p>
+        <br>
+        <a href="{{ route('extrato') }}" class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Visualizar Extrato
+        </a>
     </div>
 
     <div>
         <div class="flex items-center">
             <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Estatísticas Mensais e Anuais
+                Extrato
             </h2>
         </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Mostrar gráficos e estatísticas sobre os ganhos e despesas do usuário para o mês e ano atual.
-        </p>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Visualizar
-        </button>
-    </div>
-
-    <div>
-        <div class="flex items-center">
-            <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Ganhos e Despesas Recentes
-            </h2>
-        </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Exibir uma lista dos ganhos e despesas recentes do usuário.
-        </p>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Visualizar
-        </button>
-    </div>
-
-    <div>
-        <div class="flex items-center">
-            <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Gerenciar Ganhos e Despesas
-            </h2>
-        </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Permitir ao usuário visualizar e editar seus ganhos e despesas existentes. Fornecer opções para categorizar as transações financeiras e criar ganhos e despesas recorrentes.
-        </p>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            <a href="transfer/create">Adicionar</a>
-        </button>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Editar
-        </button>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Visualizar
-        </button>
-    </div>
-
-    <div>
-        <div class="flex items-center">
-            <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Filtrar e Pesquisar
-            </h2>
-        </div>
-
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Fornecer opções para o usuário filtrar e pesquisar ganhos e despesas específicos com base em critérios diferentes.
-        </p>
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Pesquisar
-        </button>
+        <p>O usuario poderá visualizar suas movimentações!</p>
+        <br>
+        <a href="{{ route('transfer.create') }}" class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Adicionar Transferência
+        </a>
     </div>
 </div>
+

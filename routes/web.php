@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExtractController;
 use App\Http\Controllers\TransferController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::get('/', function () {
 Route::get('/transfer', [TransferController::class, 'index'])->name('transfer.index');
 Route::get('/transfer/create', [TransferController::class, 'create'])->name('transfer.create');
 Route::post('/transfer', [TransferController::class, 'store'])->name('transfer.store');
+Route::get('/extrato', [ExtractController::class, 'index'])->name('extrato');
 
 Route::middleware([
     'auth:sanctum',
@@ -31,11 +33,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-Route::get('/transacoes/ganhos', function () {
-    return view('ganhos');
-})->name('ganhos');
-
-Route::get('/transacoes/gastos', function () {
-    return view('gastos');
-})->name('gastos');
